@@ -21,3 +21,9 @@ jobs:
       - run: npm version patch -m "[RELEASE] %s"
 
       - run: git push
+
+      # Read release from file
+      - run: node devops/getSentryRelease.js
+        id: sentry-version-release
+
+      - run: echo ${{steps.sentry-version-release.outputs}}
