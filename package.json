@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "node devops/versionReader.js > attempts/version.js"
+    "version": "node devops/versionReader.js > attempts/version.js && cat attempts/version.js && git add attempts/version.js"
   },
   "repository": {
     "type": "git",
