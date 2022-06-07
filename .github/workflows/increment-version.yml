@@ -23,7 +23,6 @@ jobs:
       - run: git push
 
       # Read release from file
-      - run: node devops/getSentryRelease.js
-        id: sentry-version-release
+      - run: echo "SENTRY_RELEASE_VERSION=$(node devops/getSentryRelease.js)" >> $GITHUB_ENV
 
-      - run: echo ${{steps.sentry-version-release.outputs}}
+      - run: echo ${{ env.SENTRY_RELEASE_VERSION }}
