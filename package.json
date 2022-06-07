@@ -1,0 +1,20 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "Testing GH Actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "node devops/versionReader.js > attempts/version.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidfreeflow/gh-actions-testing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidfreeflow/gh-actions-testing/issues"
+  },
+  "homepage": "https://github.com/davidfreeflow/gh-actions-testing#readme"
+}

@@ -1,0 +1,26 @@
+name: Version Increment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.VERSION_INCREMENT_PERSONAL_ACCESS_TOKEN }}
+
+      - run: git config --global user.name 'David Cabrera'
+      - run: git config --global user.email 'david@freeflow.chat'
+
+      - run: npm version patch -m "[RELEASE] %s"
+
+      - run: node devops/versionReader.js > attempts/version.ts
+
+      - run: npm run version
+
+      - run: git push
