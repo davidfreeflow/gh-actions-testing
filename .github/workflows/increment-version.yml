@@ -19,8 +19,6 @@ jobs:
       - run: git config --global user.email 'david@freeflow.chat'
 
       - run: npm version patch -m "[RELEASE] %s"
-
-      - run: node devops/versionReader.js > attempts/version.js
       - run: git add attempts/version.js
 
       - run: git push
