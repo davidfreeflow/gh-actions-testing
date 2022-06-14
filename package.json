@@ -1,6 +1,6 @@
 {
   "name": "test-project",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Testing GH Actions",
   "main": "index.js",
   "scripts": {
