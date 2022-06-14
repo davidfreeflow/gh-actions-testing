@@ -25,4 +25,6 @@ jobs:
       # Read release from file
       - run: echo "SENTRY_RELEASE_VERSION=$(node devops/getSentryRelease.js)" >> $GITHUB_ENV
       - run: echo $(node devops/getSentryRelease.js)
+
       - run: echo ${{ env.SENTRY_RELEASE_VERSION }}
+        name: Create new release in Sentry (${{ env.SENTRY_RELEASE_VERSION }})
